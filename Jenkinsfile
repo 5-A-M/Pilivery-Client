@@ -19,7 +19,7 @@ pipeline {
         stage('prepare') {
             steps {
                 echo 'prepare'
-                git branch: "${BRANCH}", credentialsId: "${GIT_ACCOUNT}", url: 'https://github.com/5-A-M/-reacttest.git'
+                git branch: "${BRANCH}", credentialsId: "${GIT_ACCOUNT}", url: 'https://github.com/5-A-M/Pilivery-Client.git'
                 sh 'ls'
             }
         }
