@@ -26,7 +26,6 @@ pipeline {
         stage('clone secret file') {
             steps {
                 withCredentials([file(credentialsId: 'FrontEnv', variable: 'secretFile')]) {
-                    sh 'chown -R root:5am /var/lib/jenkins/workspace/Front/'
                     sh "pwd /var/lib/jenkins/workspace/Front/"
                     dir('./src/main/resources') {
                         sh "cp ${secretFile} /var/lib/jenkins/workspace/Front/"
